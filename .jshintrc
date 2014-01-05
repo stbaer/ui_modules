@@ -1,0 +1,24 @@
+{
+    "node": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "boss": true,
+    "debug": true,
+    "eqnull": true,
+    "browser": true,
+    "laxcomma": true,
+    "bitwise": true,
+    "trailing": true,
+    "smarttabs": true,
+    "globals": {
+        "console": true,
+        "$": true,
+        "jQuery": true
+    }
+}

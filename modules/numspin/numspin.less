@@ -1,0 +1,16 @@
+.ui_numspin {
+  display: inline-block;
+  input{
+    width: 35px; //will be overridden by bootstrap if twbs is true
+  }
+  &.twbs{
+    .input-group{
+      float: left;
+      max-width: 150px;
+    }
+    .reset{
+      float: right;
+    }
+  }
+
+}

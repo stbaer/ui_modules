@@ -1,0 +1,4 @@
+{
+    "base": "/*!\n * <%= pkg.name %> - v<%= pkg.version %>\n * Build date: <%= grunt.template.today(\"yyyy-mm-dd HH:MM\") %>\n * Included files:\n * ",
+    "dist": "<%= concat.dist.src %>\n */\n"
+}

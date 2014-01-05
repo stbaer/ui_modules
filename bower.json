@@ -1,0 +1,25 @@
+{
+  "name": "ui_modules",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~2"
+  },
+  "devDependencies": {
+    "funcunit": "~2.0.4",
+    "qunit": "1.12",
+    "nouislider": "~5.0",
+    "bootstrap": "~3.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets",
+    "Gruntfile.js",
+    "README.md",
+    "package.json",
+    "banners.json",
+    "demo",
+    "tests"
+  ],
+  "private": true
+}

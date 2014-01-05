@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="../../assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../modules/numspin/numspin.css">
+    <style>
+        .test {
+            border: 1px dashed #ff0000;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<textarea class="form-control" rows="2"></textarea>
+<h4>
+    Bootstrap:
+</h4>
+<pre>$('.test:eq(0)').ui_numspin({
+    twbs3: true
+});
+</pre>
+<div class="test"></div><br>
+
+<pre>$('.test:eq(1)').ui_numspin({
+    twbs3: true,
+    formControlSize: lg
+});</pre>
+<div class="test"></div><br>
+
+<pre>
+$('.test:eq(2)').ui_numspin({
+    val: 20,
+    minVal: 10,
+    maxVal: 30,
+    twbs3: true,
+    formControlSize: 'sm',
+    enableReset: false,
+    classes: 'testClass'
+});
+</pre>
+<div class="test"></div><br>
+
+<h4>
+    Plain:
+</h4>
+<pre>
+    $('.test:eq(3)').ui_numspin();
+</pre>
+<div class="test"></div>
+
+
+<script src="../../assets/jquery/jquery.min.js"></script>
+<script src="../../modules/numspin/numspin.js"></script>
+<script type='text/javascript'>
+    $('.test:eq(0)').ui_numspin({twbs3: true});
+    $('.test:eq(1)').ui_numspin({twbs3: true, formControlSize: 'lg'});
+    $('.test:eq(2)').ui_numspin({val: 20, minVal: 10, maxVal: 30, twbs3: true, enableReset: false, formControlSize: 'sm', classes: 'testClass'});
+    $('.test:eq(3)').ui_numspin();
+
+    $('.test').on('numchanged', function(ev, el, val, nr){
+        var text = 'Value of spinner changed to: ' + val + ' On spinner nr. ' + nr;
+        $('textarea').text(text);
+        console.log(text);
+    });
+</script>
+</body>
+</html>

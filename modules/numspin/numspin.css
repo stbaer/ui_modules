@@ -1,0 +1,13 @@
+.ui_numspin {
+  display: inline-block;
+}
+.ui_numspin input {
+  width: 35px;
+}
+.ui_numspin.twbs .input-group {
+  float: left;
+  max-width: 150px;
+}
+.ui_numspin.twbs .reset {
+  float: right;
+}
