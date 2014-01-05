@@ -18,7 +18,6 @@
     "README.md",
     "package.json",
     "banners.json",
-    "demo",
     "tests"
   ],
   "private": true

@@ -1,8 +1,10 @@
 # ui-modules
 
-## Some jquery modules / widgets
+Some jquery modules / widgets
 
-- Number spinner - a simple spinner that can be used with bootstrap 3
+## Number spinner
+
+- a simple spinner that can be used with bootstrap 3
 
     #### default options:
 
@@ -30,4 +32,4 @@
         //Do sth
     });
 
-- @TODO
+## @TODO
