@@ -8,7 +8,8 @@
     "funcunit": "~2.0.4",
     "qunit": "1.12",
     "nouislider": "~5.0",
-    "bootstrap": "~3.0.0"
+    "bootstrap": "~3.0.0",
+    "spectrum": "~1.2.0"
   },
   "ignore": [
     "**/.*",

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="../../dist/colorpicker/colorpicker.css">
+    <style>
+        .test {
+            border: 1px dashed #ff0000;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<textarea rows="2"></textarea>
+<h4>
+    Default:
+</h4>
+<pre>$('.test:eq(0)').ui_colorpicker();
+</pre>
+<div class="test"></div>
+<br>
+
+<h4>
+    Different palette, white selected:
+</h4>
+<pre>$('.test:eq(1)').ui_colorpicker();
+</pre>
+<div class="test"></div>
+<br>
+
+
+<script src="../../assets/jquery/jquery.min.js"></script>
+<script src="../../dist/colorpicker/colorpicker.js"></script>
+
+<script type='text/javascript'>
+    $('.test:eq(0)').ui_colorpicker();
+    $('.test:eq(1)').ui_colorpicker({
+        color: 'white',
+        palette: [
+            ['black', 'white', 'wheat', 'rgb(255, 128, 0);']
+        ]
+    });
+
+    $('.test').on('color_changed', function(ev, el, color){
+        var text = 'Color changed to: ' + el;
+        $('textarea').text(text);
+    });
+</script>
+
+</body>
+</html>
