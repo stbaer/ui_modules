@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="../../dist/slider/slider.css">
+    <style>
+        .test {
+            border: 1px dashed #ff0000;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<textarea rows="2"></textarea>
+
+<h4>
+    Default:
+</h4>
+<pre>$('.test:eq(0)').ui_slider();
+</pre>
+<div class="test">
+    <input type="text" />
+    <div class="slide"></div>
+    <button class="reset">Reset</button>
+</div>
+<br>
+
+<script src="../../assets/jquery/jquery.min.js"></script>
+<script src="../../dist/slider/slider.js"></script>
+
+<script type='text/javascript'>
+    $('.test:eq(0)').ui_slider();
+
+    $('.test').on('slider_changed', function(ev, val){
+        var text = 'Slider value changed to: ' + val;
+        $('textarea').text(text);
+    });
+</script>
+
+</body>
+</html>

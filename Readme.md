@@ -28,13 +28,13 @@ Some jquery modules / widgets
 
     #### events:
 
-    ...on('numchanged', function(event, element, value){
-        //Do sth
-    });
+        ...on('numchanged', function(event, element, value){
+            //Do sth
+        });
 
 ## Colorpicker
 
-- a helper for using spectrum (http://bgrins.github.io/spectrum/)
+- colorpicker, uses [spectrum](http://bgrins.github.io/spectrum/)
 
     #### default options:
 
@@ -59,20 +59,50 @@ Some jquery modules / widgets
             ['red', 'yellow', 'green', 'blue', 'violet']
         ]
 
-#### depends on:
+    #### depends on:
 
     - jquery
 
-#### includes:
+    #### includes:
 
     - spectrum.js / spectrum.css
 
-#### usage:
+    #### usage:
 
-    $('.someEmptyDiv').ui_colorpicker(options);
+        $('.someEmptyDiv').ui_colorpicker(options);
 
-#### events:
+    #### events:
 
-    ...on('numchanged', function(event, color){
-        //Do sth
-    });
+        ...on('numchanged', function(event, color){
+            //Do sth
+        });
+
+## Slider
+
+- slider widget, uses [noUiSlider](http://refreshless.com/nouislider/)
+
+    #### depends on:
+
+    - jquery
+
+    #### includes:
+
+    - jquery.nouislider.js / jquery.nouislider.css
+
+    ### minimal Markup:
+
+        <div class="example">
+            <input type="text" />
+            <div class="slide"></div>
+            <button class="reset">Reset</button>
+        </div>
+
+    #### usage:
+
+        $('.example').ui_slider(options);
+
+    #### events:
+
+        ...on('slider_changed', function(event, value){
+            //Do sth
+        });

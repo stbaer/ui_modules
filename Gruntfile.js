@@ -28,6 +28,9 @@ module.exports = function (grunt) {
                 nonull: true
             },
             colorpicker_css: {
+                options: {
+                    separator: '\n'
+                },
                 src: ['assets/spectrum/spectrum.css' /*, 'modules/colorpicker/*.css' */],
                 dest: 'dist/colorpicker/colorpicker.css',
                 nonull: true
@@ -38,15 +41,31 @@ module.exports = function (grunt) {
                 nonull: true
             },
             numspin_css: {
+                options: {
+                    separator: '\n'
+                },
                 src: ['modules/numspin/numspin.css'],
                 dest: 'dist/numspin/numspin.css',
+                nonull: true
+            },
+            slider: {
+                src: ['assets/nouislider/jquery.nouislider.js', 'modules/slider/slider.js'],
+                dest: 'dist/slider/slider.js',
+                nonull: true
+            },
+            slider_css: {
+                options: {
+                    separator: '\n'
+                },
+                src: ['assets/nouislider/jquery.nouislider.css', 'modules/slider/slider.css' ],
+                dest: 'dist/slider/slider.css',
                 nonull: true
             },
             dist: {
                 options: {
                     banner: '<%= banners.base %><%= banners.dist %>'
                 },
-                src: ['<%= concat.colorpicker.src %>', '<%= concat.numspin.src %>'],
+                src: ['<%= concat.colorpicker.src %>', '<%= concat.numspin.src %>', '<%= concat.slider.src %>'],
                 dest: 'dist/ui_modules.js',
                 nonull: true
             },
@@ -56,7 +75,7 @@ module.exports = function (grunt) {
                     separator: '\n',
                     banner: '<%= banners.base %><%= banners.dist_css %>'
                 },
-                src: ['<%= concat.colorpicker_css.src %>', '<%= concat.numspin_css.src %>'],
+                src: ['<%= concat.colorpicker_css.src %>', '<%= concat.numspin_css.src %>', '<%= concat.slider_css.src %>'],
                 dest: 'dist/ui_modules.css',
                 nonull: true
             }
@@ -79,6 +98,13 @@ module.exports = function (grunt) {
             scripts: {
                 files: ['<%= jshint.all %>'],
                 tasks: ['newer:jshint:all', 'build'],
+                options: {
+                    spawn: false
+                }
+            },
+            css: {
+                files: ['modules/**/*.css'],
+                tasks: ['build'],
                 options: {
                     spawn: false
                 }

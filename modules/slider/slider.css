@@ -1,0 +1,26 @@
+/*@TODO...*/
+.ui_slider {
+    display: block;
+    min-width: 200px;
+}
+
+.ui_slider input {
+    width : 25px;
+    float: left;
+    padding: 3px;
+    text-align: center;
+}
+
+.ui_slider .slide {
+    max-width : 50%;
+    position: relative;
+    left: 40px;
+    top: -5px;
+    margin: 10px 0;
+}
+
+.ui_slider .reset {
+    position: relative;
+    top: -38px;
+    float: right;
+}
