@@ -32,4 +32,47 @@ Some jquery modules / widgets
         //Do sth
     });
 
-## @TODO
+## Colorpicker
+
+- a helper for using spectrum (http://bgrins.github.io/spectrum/)
+
+    #### default options:
+
+         classes: '',
+        /*
+         * options for spectrum
+         * see: http://bgrins.github.io/spectrum/#options
+         */
+        color: 'black',
+        appendTo: 'parent', //!
+        showInput: false,
+        showInitial: true,
+        showAlpha: false,
+        disabled: false,
+        showPalette: true,
+        showPaletteOnly: true,
+        showSelectionPalette: true,
+        chooseText: "OK",
+        className: '',
+        palette: [
+            ['black', 'white', 'wheat', 'rgb(255, 128, 0);', 'hsv 100 70 50'],
+            ['red', 'yellow', 'green', 'blue', 'violet']
+        ]
+
+#### depends on:
+
+    - jquery
+
+#### includes:
+
+    - spectrum.js / spectrum.css
+
+#### usage:
+
+    $('.someEmptyDiv').ui_colorpicker(options);
+
+#### events:
+
+    ...on('numchanged', function(event, color){
+        //Do sth
+    });
