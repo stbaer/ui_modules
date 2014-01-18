@@ -73,7 +73,7 @@ Some jquery modules / widgets
 
     #### events:
 
-        ...on('numchanged', function(event, color){
+        ...on('color_changed', function(event, color){
             //Do sth
         });
 
