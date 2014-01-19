@@ -1,0 +1,16 @@
+.ui_colorpicker {
+    display: inline-block;
+}
+
+.ui_colorpicker .sp-replacer {
+    overflow: hidden;
+    cursor: pointer;
+    border: 0;
+    background: #fff;
+    color: inherit;
+    vertical-align: inherit;
+}
+
+.ui_colorpicker .sp-replacer.sp-active {
+    background-color: #ebebeb;
+}

@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 options: {
                     separator: '\n'
                 },
-                src: ['assets/spectrum/spectrum.css' /*, 'modules/colorpicker/*.css' */],
+                src: ['assets/spectrum/spectrum.css' , 'modules/colorpicker/*.css'],
                 dest: 'dist/colorpicker/colorpicker.css',
                 nonull: true
             },

@@ -36,7 +36,6 @@ $('.test:eq(2)').ui_numspin({
     maxVal: 30,
     twbs3: true,
     formControlSize: 'sm',
-    enableReset: false,
     classes: 'testClass'
 });
 </pre>
@@ -56,7 +55,7 @@ $('.test:eq(2)').ui_numspin({
 <script type='text/javascript'>
     $('.test:eq(0)').ui_numspin({twbs3: true});
     $('.test:eq(1)').ui_numspin({twbs3: true, formControlSize: 'lg'});
-    $('.test:eq(2)').ui_numspin({val: 20, minVal: 10, maxVal: 30, twbs3: true, enableReset: false, formControlSize: 'sm', classes: 'testClass'});
+    $('.test:eq(2)').ui_numspin({val: 20, minVal: 10, maxVal: 30, twbs3: true, formControlSize: 'sm', classes: 'testClass'});
     $('.test:eq(3)').ui_numspin();
 
     $('.test').on('numchanged', function(ev, el, val, nr){

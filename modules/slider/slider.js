@@ -34,6 +34,7 @@
         init: function (el, opts) {
 
             this.count = count++;
+            this.defaults = $.extend({}, opts);
 
             var $el = $(el);
 
@@ -52,10 +53,9 @@
             this.attachEventHandlers(el, opts);
 
         },
-
         attachEventHandlers: function(el, opts){
-            var $el = $(el),
-                defaults = this._defaults,
+            var self = this,
+                $el = $(el),
                 $input = $el.find('input'),
                 $slider = $el.find('.slide');
 
@@ -82,7 +82,7 @@
             });
 
             $el.find('.reset').on('click', function(ev){
-                $input.val(defaults.val).trigger('change');
+                $input.val(self.defaults.val).trigger('change');
              //   $slider.val(defaults.val);
             });
 

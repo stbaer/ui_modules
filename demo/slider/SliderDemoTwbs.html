@@ -29,11 +29,26 @@
 </div>
 <br>
 
+<h4>
+    Custom val:
+</h4>
+<pre>$('.test:eq(0)').ui_slider({val: 5});
+</pre>
+<div class="test">
+    <input type="text" class="form-control input-sm" />
+    <div class="slide"></div>
+    <button class="btn btn-default btn-sm reset">
+        <span class="glyphicon glyphicon-repeat"></span>
+    </button>
+</div>
+<br>
+
 <script src="../../assets/jquery/jquery.min.js"></script>
 <script src="../../dist/slider/slider.js"></script>
 
 <script type='text/javascript'>
     $('.test:eq(0)').ui_slider();
+    $('.test:eq(1)').ui_slider({val: 5});
 
 
     $('.test').on('slider_changed', function(ev, val){

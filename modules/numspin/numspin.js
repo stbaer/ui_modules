@@ -32,6 +32,7 @@
         init: function (el, opts) {
 
             this.count = count++;
+            this.defaults = $.extend({}, opts);
 
             $(el).addClass([this._name, opts.classes, (opts.twbs3 ? 'twbs' : '')].join(' '))
                 .append(this.getView())
@@ -44,24 +45,23 @@
 
             var $el = $(el),
                 self = this,
-                defaults = this._defaults,
                 $input = $(el).find('input');
 
             $el.find('.decr').on('click', function () {
-                self.validateAndSet(parseInt($input.val(), 10) - defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) - self.defaults.step);
             });
             $el.find('.incr').on('click', function () {
-                self.validateAndSet(parseInt($input.val(), 10) + defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) + self.defaults.step);
             });
             $el.find('input').on('change', function () {
-                self.validateAndSet(parseInt($input.val(), 10) + defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) + self.defaults.step);
             });
             $el.find('.reset').on('click', function () {
-                self.validateAndSet(defaults.val);
+                self.validateAndSet(self.defaults.val);
             });
             $el.on('numchanged', function (ev, el, val) {
                 $input.val(val);
-                self.options.val = val;
+                opts.val = val;
             });
         },
 

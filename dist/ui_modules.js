@@ -1,6 +1,6 @@
 /*!
  * ui_modules - v0.1.0
- * Build date: 2014-01-12 13:55
+ * Build date: 2014-01-19 08:06
  * Included files:
  * assets/spectrum/spectrum.js,modules/colorpicker/colorpicker.js,modules/numspin/numspin.js,assets/nouislider/jquery.nouislider.js,modules/slider/slider.js
  */
@@ -2118,6 +2118,7 @@
         init: function (el, opts) {
 
             this.count = count++;
+            this.defaults = $.extend({}, opts);
 
             $(el).addClass([this._name, opts.classes, (opts.twbs3 ? 'twbs' : '')].join(' '))
                 .append(this.getView())
@@ -2130,24 +2131,23 @@
 
             var $el = $(el),
                 self = this,
-                defaults = this._defaults,
                 $input = $(el).find('input');
 
             $el.find('.decr').on('click', function () {
-                self.validateAndSet(parseInt($input.val(), 10) - defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) - self.defaults.step);
             });
             $el.find('.incr').on('click', function () {
-                self.validateAndSet(parseInt($input.val(), 10) + defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) + self.defaults.step);
             });
             $el.find('input').on('change', function () {
-                self.validateAndSet(parseInt($input.val(), 10) + defaults.step);
+                self.validateAndSet(parseInt($input.val(), 10) + self.defaults.step);
             });
             $el.find('.reset').on('click', function () {
-                self.validateAndSet(defaults.val);
+                self.validateAndSet(self.defaults.val);
             });
             $el.on('numchanged', function (ev, el, val) {
                 $input.val(val);
-                self.options.val = val;
+                opts.val = val;
             });
         },
 
@@ -3673,6 +3673,7 @@
         init: function (el, opts) {
 
             this.count = count++;
+            this.defaults = $.extend({}, opts);
 
             var $el = $(el);
 
@@ -3691,10 +3692,9 @@
             this.attachEventHandlers(el, opts);
 
         },
-
         attachEventHandlers: function(el, opts){
-            var $el = $(el),
-                defaults = this._defaults,
+            var self = this,
+                $el = $(el),
                 $input = $el.find('input'),
                 $slider = $el.find('.slide');
 
@@ -3721,7 +3721,7 @@
             });
 
             $el.find('.reset').on('click', function(ev){
-                $input.val(defaults.val).trigger('change');
+                $input.val(self.defaults.val).trigger('change');
              //   $slider.val(defaults.val);
             });
 

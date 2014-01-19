@@ -26,11 +26,24 @@
 </div>
 <br>
 
+<h4>
+    Custom val:
+</h4>
+<pre>$('.test:eq(0)').ui_slider({val: 5});
+</pre>
+<div class="test">
+    <input type="text" />
+    <div class="slide"></div>
+    <button class="reset">Reset</button>
+</div>
+<br>
+
 <script src="../../assets/jquery/jquery.min.js"></script>
 <script src="../../dist/slider/slider.js"></script>
 
 <script type='text/javascript'>
     $('.test:eq(0)').ui_slider();
+    $('.test:eq(1)').ui_slider({val: 5});
 
     $('.test').on('slider_changed', function(ev, val){
         var text = 'Slider value changed to: ' + val;
