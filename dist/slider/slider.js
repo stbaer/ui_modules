@@ -1418,7 +1418,8 @@
 	};
 
 }( window['jQuery'] || window['Zepto'] ));
-;//@formatter:off
+
+//@formatter:off
 ;(function ($, window, document, undefined) {
 //@formatter:on
 

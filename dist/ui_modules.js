@@ -1,6 +1,6 @@
 /*!
  * ui_modules - v0.1.0
- * Build date: 2014-01-19 08:06
+ * Build date: 2014-01-20 18:38
  * Included files:
  * assets/spectrum/spectrum.js,modules/colorpicker/colorpicker.js,modules/numspin/numspin.js,assets/nouislider/jquery.nouislider.js,modules/slider/slider.js
  */
@@ -2014,7 +2014,8 @@
     });
 
 })(window, jQuery);
-;//@formatter:off
+
+//@formatter:off
 ;(function ($, window, document, undefined) {
 //@formatter:on
 
@@ -2084,7 +2085,8 @@
     };
 
 })(jQuery, window, document);
-;//@formatter:off
+
+//@formatter:off
 ;(function ($, window, document, undefined) {
 //@formatter:on
 
@@ -2217,7 +2219,8 @@
     };
 
 })(jQuery, window, document);
-;/*! $.noUiSlider
+
+/*! $.noUiSlider
  @version 5.0.0
  @author Leon Gersen https://twitter.com/LeonGersen
  @license WTFPL http://www.wtfpl.net/about/
@@ -3637,7 +3640,8 @@
 	};
 
 }( window['jQuery'] || window['Zepto'] ));
-;//@formatter:off
+
+//@formatter:off
 ;(function ($, window, document, undefined) {
 //@formatter:on
 

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
         concat: {
             options: {
-                separator: ';'
+                separator: '\n'
             },
             colorpicker: {
                 src: ['assets/spectrum/spectrum.js', 'modules/colorpicker/colorpicker.js'],
