@@ -89,7 +89,7 @@
                 object = $('<div/>').html(
                     [
                         '<button type="button" class="decr">-</button>', '<input type="text"/>',
-                        '<button class="incr">+</button>',
+                        '<button type="button" class="incr">+</button>',
                         opts.enableReset ? '<button type="button" class="reset">Reset</button>' : ''
                     ].join(''));
 

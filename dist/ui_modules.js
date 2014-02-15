@@ -1,6 +1,6 @@
 /*!
  * ui_modules - v0.1.0
- * Build date: 2014-01-20 18:38
+ * Build date: 2014-02-15 18:39
  * Included files:
  * assets/spectrum/spectrum.js,modules/colorpicker/colorpicker.js,modules/numspin/numspin.js,assets/nouislider/jquery.nouislider.js,modules/slider/slider.js
  */
@@ -2177,7 +2177,7 @@
                 object = $('<div/>').html(
                     [
                         '<button type="button" class="decr">-</button>', '<input type="text"/>',
-                        '<button class="incr">+</button>',
+                        '<button type="button" class="incr">+</button>',
                         opts.enableReset ? '<button type="button" class="reset">Reset</button>' : ''
                     ].join(''));
 
