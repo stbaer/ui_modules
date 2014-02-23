@@ -1,6 +1,6 @@
 /*!
  * ui_modules - v0.1.0
- * Build date: 2014-02-15 18:39
+ * Build date: 2014-02-24 00:20
  * Included files:
  * assets/spectrum/spectrum.js,modules/colorpicker/colorpicker.js,modules/numspin/numspin.js,assets/nouislider/jquery.nouislider.js,modules/slider/slider.js
  */
@@ -2040,8 +2040,7 @@
             chooseText: "OK",
             className: '',
             palette: [
-                ['black', 'white', 'wheat', 'rgb(255, 128, 0);', 'hsv 100 70 50'],
-                ['red', 'yellow', 'green', 'blue', 'violet']
+                ['black', 'white', 'rgb(255, 128, 0);', 'red', 'yellow', 'blue'],
             ]
         };
 

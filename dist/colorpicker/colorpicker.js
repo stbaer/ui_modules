@@ -2034,8 +2034,7 @@
             chooseText: "OK",
             className: '',
             palette: [
-                ['black', 'white', 'wheat', 'rgb(255, 128, 0);', 'hsv 100 70 50'],
-                ['red', 'yellow', 'green', 'blue', 'violet']
+                ['black', 'white', 'rgb(255, 128, 0);', 'red', 'yellow', 'blue'],
             ]
         };
 
