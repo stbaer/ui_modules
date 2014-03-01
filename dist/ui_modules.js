@@ -1,6 +1,6 @@
 /*!
  * ui_modules - v0.1.0
- * Build date: 2014-02-24 00:20
+ * Build date: 2014-03-01 09:26
  * Included files:
  * assets/spectrum/spectrum.js,modules/colorpicker/colorpicker.js,modules/numspin/numspin.js,assets/nouislider/jquery.nouislider.js,modules/slider/slider.js
  */
